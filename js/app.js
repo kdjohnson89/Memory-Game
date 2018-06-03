@@ -132,7 +132,7 @@ let moveCounter = document.querySelector('.moves');
 let stars = document.querySelector('.stars');
 let one = document.querySelector('.one');
 let two = document.querySelector('.two');
-
+  
 function moveCount() {
   moves++;
   moveCounter.innerHTML = moves;
@@ -178,6 +178,7 @@ window.onclick = function(event) {
 //Play again button will clear modal and reset timer
 document.querySelector('.button').addEventListener('click', playAgain);
 document.querySelector('.button').addEventListener('click', resetTimer);
+document.querySelector('.restart').addEventListener('click', playAgain);
 
 function playAgain() {
   modal.style.display = "none";
@@ -185,8 +186,10 @@ function playAgain() {
   one.style.visibility = 'visible';
   two.style.visibility = 'visible';
 }  
-
+  
 }
 
 initGame();
+
+
 
