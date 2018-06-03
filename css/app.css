@@ -159,3 +159,16 @@ Modal
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/*
+Media queries
+*/
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    display: inline-block;
+    margin: 0;
+  }
+}
