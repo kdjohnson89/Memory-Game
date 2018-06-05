@@ -26,16 +26,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 800px;
+    margin: auto;
 }
 
 h1 {
     font-family: 'Georgia';
     font-weight: 300;
     color: #aa7ecd;
-    font-weight: bold;
 }
-
-
 
 /*
  * Styles for the deck of cards
@@ -43,7 +42,7 @@ h1 {
 
 .deck {
     width: 660px;
-    min-height: 680px;
+    height: 660px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -56,8 +55,8 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    height: calc((100% - 100px) / 4);
+    width: calc((100% - 100px) / 4);
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -90,7 +89,7 @@ h1 {
  */
 
 .score-panel {
-    text-align: left;
+    text-align: center;
     width: 345px;
     margin-bottom: 10px;
 }
@@ -108,7 +107,6 @@ h1 {
 }
 
 .score-panel .restart {
-    float: right;
     cursor: pointer;
 }
 /*
@@ -123,23 +121,23 @@ Modal
 
 /* The Modal (background) */
 .modal {
-    display: none; 
+    display: none; /* Hidden by default */
     position: absolute;
-    z-index: 2; 
+    z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
     text-align: center;
     background-color: #fefefe;
-    margin: 15% auto; 
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
@@ -160,15 +158,19 @@ Modal
     cursor: pointer;
 }
 
-
 /*
 Media queries
 */
 
-@media screen and (max-width: 600px) {
-  .container {
-    width: 80%;
-    display: inline-block;
-    margin: 0;
+@media screen and (max-width: 660px) {
+  .deck {
+    width: 90%;
+  }
+  .card {
+    width: calc((100% - 10px) / 4); 
+    height: calc((100% - 10px) / 4);
+    margin: 5px auto;
   }
 }
+
+
