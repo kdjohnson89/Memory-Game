@@ -24,3 +24,5 @@ _Beginner code provided by https://github.com/udacity/fend-project-memory-game_
 
 _Fonts from https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css and https://fonts.googleapis.com/css?family=Coda_
 
+_CSS autoprefixer from https://autoprefixer.github.io/_
+
