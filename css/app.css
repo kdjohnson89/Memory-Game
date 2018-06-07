@@ -47,22 +47,23 @@ h1 {
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-gap: 5px;
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
 }
 
 .deck .card {
-    height: calc((100% - 100px) / 4);
-    width: calc((100% - 100px) / 4);
+    height: 125px;
+    width: 125px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
     cursor: pointer;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
@@ -162,15 +163,41 @@ Modal
 Media queries
 */
 
+
 @media screen and (max-width: 660px) {
   .deck {
     width: 90%;
   }
-  .card {
-    width: calc((100% - 10px) / 4); 
-    height: calc((100% - 10px) / 4);
+  .deck .card {
+    width: 100px;
+    height: 100px;
     margin: 5px auto;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .deck {
+    width: 90%;
+    height: 500px;
+  }
+  .deck .card {
+    width: 80px;
+    height: 80px;
+    margin: 5px auto;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .deck {
+    width: 90%;
+    height: 450px;
+  }
+  .deck .card {
+    width: 50px;
+    height: 50px;
+    margin: 5px auto;
+  }
+}
+
 
 
