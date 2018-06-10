@@ -2,6 +2,8 @@
 
 ## Project 2 from the Udacity Front End Web Development nanodegree 
 
+Play game here: https://kdjohnson89.github.io/Memory-Game/
+
 ## Instructions
 
 Timer begins as soon as the page is loaded.
